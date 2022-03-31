@@ -4,7 +4,7 @@
     Before you run the code, you need to know which function and how
     many unknowns paras you need to solve, then prepare the initial 
     values(x)、Primitive Function(f) and Jocobian Matrix(jacobian).
-    And you can see a example in the last section.
+    And you can see an example in the last section.
 """
 
 import numpy as np
@@ -106,6 +106,6 @@ if __name__ == "__main__":
     x3 = symbols("x3")
     x = np.array([1, 1, 1], dtype=float)
     f = (x1-10)**2+2*(x2-12)**2+4*(x3-8)**2
-    
+
     print(bfgs_newton(f, x, 3, 2000))
     print(dfp_newton(f, x, 3, 1000))
