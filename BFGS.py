@@ -108,4 +108,4 @@ if __name__ == "__main__":
     f = (x1-10)**2+2*(x2-12)**2+4*(x3-8)**2
     
     print(bfgs_newton(f, x, 3, 2000))
-    # print(dfp_newton(f, x, 3, 1000))
+    print(dfp_newton(f, x, 3, 1000))
