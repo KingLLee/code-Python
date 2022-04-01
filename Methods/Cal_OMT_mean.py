@@ -30,15 +30,13 @@ def cal_OMT_mean(lat, lon, lev1, ts):
         This is an atempt of matrix manipulation without circulation.
     '''
     ## initialize the value
-    lonn = np.zeros(np.size(lon)+1)
-    lonn[1:-1] = np.mean(np.vstack((np.append(lon,0), np.insert(lon,0,0)))[:, 1:-1], axis=0)
-    lonn[0] = lon[0] + (lon[0]-lon[1])/2
-    lonn[-1] = lon[-1] + (lon[-1]-lon[-2])/2
+    tempa = np.append(lon, lon[-1]+(lon[-1]-lon[-2]))
+    tempb = np.insert(lon, 0, lon[0]+(lon[0]-lon[1]))
+    lonn = (tempa+tempb)/2
 
-    latt = np.zeros(np.size(lat)+1)
-    latt[1:-1] = np.mean(np.vstack((np.append(lat,0), np.insert(lat,0,0)))[:, 1:-1], axis=0)
-    latt[0] = lat[0] + (lat[0]-lat[1])/2
-    latt[-1] = lat[-1] + (lat[-1]-lat[-2])/2
+    tempa = np.append(lat, lat[-1]+(lat[-1]-lat[-2]))
+    tempb = np.insert(lat, 0, lat[0]+(lat[0]-lat[1]))
+    latt = (tempa+tempb)/2
 
     delta_lev1 = np.diff(lev1)
 
