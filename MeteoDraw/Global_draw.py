@@ -15,6 +15,22 @@ from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLoca
 import cmaps
 
 def Global_draw(lon, lat, z, central_degree, levels, unit, title):
+    '''
+        :param lon: longitude vector
+        :param lat: latitude vector
+        :param   z: varible matrix, (lat, lon)
+        :param central_degree: longitude central degree. It belongs to your
+                         selected area. For example, if your target area
+                         is the Pacific, so you should turn the central_degree
+                         to 180.
+        :param levels: It is the colorbar parameter - levels. You can adjust your
+                        levels which would be suitable for your data. Also, from 
+                        setting the levels number, you would change the colorbar 
+                        total color number, which will help you to oberseve and 
+                        anylise your pic more clearly. 
+        :param unit: data unit
+        :param title: Adjust your desirable pic title.
+    '''
     size = 32
     plt.rc('font',family='Times New Roman', size=size)
     fig = plt.figure(figsize=(16, 10), dpi=300)
