@@ -2,7 +2,7 @@
     Use python modules to draw basic Meteorological mapping.
     This script introduces how to draw the global distribution of
     different geoscience data, especially for the atmpospheric 
-    science.
+    science netCDF data.
 """
 import numpy as np
 import xarray as xr
