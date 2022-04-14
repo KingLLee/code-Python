@@ -65,15 +65,12 @@ def Global_draw(lon, lat, z, central_degree, levels, unit, title):
     [x.set_color("black") for x in ax1.spines.values()]
 
     tb = ax1.contourf(lon, lat, z, levels=levels, transform = ccrs.PlateCarree(), cmap = cmaps.NCV_jet)
-    # tb.cmap.set_over( 'magenta' )
-    # tb.cmap.set_under( 'blue' )
 
     plt.title(title, fontsize = size+5, loc = 'center', y=1.025)
     plt.title("unit: "+unit, fontsize = size-3, loc = 'right', y=1.025)
 
-    # plt.title("60-89 Sea Surface Height", fontsize = 16, loc = 'center')
-
     # gl = ax1.gridlines(crs = ccrs.PlateCarree(), draw_labels = False, linewidth = 1.5, color = 'black', alpha = 0.5, linestyle = '--')
+    
     cb = plt.colorbar(tb, shrink = 0.8, orientation='horizontal', fraction=0.1, pad=0.08, aspect=25, drawedges=True)
     cb.outline.set_edgecolor('black')
     cb.outline.set_linewidth(2)
