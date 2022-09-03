@@ -30,6 +30,8 @@ def mask_region(region_shpfile, lat, lon):
                       will give a clear mark that the code should distinguish different islands in specific location. There I 
                       choose the last location, because I just want to mask the most important part of the region. And if you 
                       need more part of the region, you can open up the code below. 
+                      What's more, try to save the mask_array if you use the high resolution, and ultimately save your time
+                      running the code again and again.
                       Thanks a lot.
     '''
     region = shapefile.Reader(region_shpfile)
