@@ -18,9 +18,10 @@ do
 	do
 		for mon in `cat month`
 		do
-
+			# Naming convention
 			filename=era5.hourly.${var}.${year}.${mon}
 
+# Create specific python script, you can change the script below if you needed.
 			cat>./down_py/${filename}.py<<EOF
 
 import cdsapi
@@ -64,6 +65,7 @@ c.retrieve(
 
 EOF
 
+# run the python script and output the log file to specific dir.
 nohup python ./down_py/${filename}.py  > ./log/${filename}.log 2>&1 &
 
 		done
