@@ -24,5 +24,5 @@ the data) will be established automatically.
 > Before you run:  
 > * Check the dir site where you want to create  
 > * Check the years, month and vars  
-> * Check the dataset python script sample for the CDS website  
+> * Check the dataset python script sample from the CDS website  
 > * Evaluate the size of each data files, so you can set the suitable sleep time.
