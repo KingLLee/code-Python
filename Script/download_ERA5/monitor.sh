@@ -2,6 +2,12 @@
 
 # This is the monitor script to monitor the era data download.
 
+# Create dir
+mkdir -p ERA5
+mkdir -p down_py
+mkdir -p log
+
+# Set the time period
 year_begin=1979
 year_end=1985
 
