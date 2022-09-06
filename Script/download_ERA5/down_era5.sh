@@ -1,9 +1,15 @@
 #! /bin/bash
 
+# Create dir
+mkdir -p ERA5
+mkdir -p down_py
+mkdir -p log
+
+# Input the parameters
 year_begin=$1
 year_end=$2
 
-echo "开始下载：$1 - $2 的ERA5数据"
+echo "Begin to download：$1 - $2 ERA5 data"
 
 for var in `cat sigle_var`
 
