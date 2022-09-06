@@ -9,7 +9,7 @@ for var in `cat sigle_var`
 
 do
 
-	mkdir -p  /mnt/group10109share/data/ERA5/${var}
+	mkdir -p  ./ERA5/${var}
 
 
 	for year in `seq ${year_begin} ${year_end}`
@@ -59,7 +59,7 @@ c.retrieve(
             '18:00', '21:00',
         ],
     },
-    '/mnt/group10109share/data/ERA5/${var}/${filename}.nc')
+    './ERA5/${var}/${filename}.nc')
 
 EOF
 
