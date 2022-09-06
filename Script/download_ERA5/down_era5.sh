@@ -6,7 +6,7 @@ year_end=$2
 
 echo "Begin to download：$1 - $2 ERA5 data"
 
-for var in `cat sigle_var`
+for var in `cat vars`
 
 do
 
