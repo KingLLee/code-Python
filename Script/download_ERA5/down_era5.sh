@@ -1,10 +1,5 @@
 #! /bin/bash
 
-# Create dir
-mkdir -p ERA5
-mkdir -p down_py
-mkdir -p log
-
 # Input the parameters
 year_begin=$1
 year_end=$2
