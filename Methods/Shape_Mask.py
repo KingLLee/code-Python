@@ -68,7 +68,15 @@ def mask_region(region_shpfile, lat, lon):
 
 # Example
 if __name__ == "__main__":
+
     lat = np.linspace(20, 1, 40, endpoint=True)
     lon = np.linspace(120, 1, 140, endpoint=True)
     region_shpfile = 'zhejiang_province.shp'
     zhejiang_mask = mask_region(region_shpfile, lat, lon)
+    
+    # save to .txt
+    np.savetxt("zhejiang_mask.txt", zhejiang_mask)
+
+    # read the txt to array
+    # zhejiang_mask = np.loadtxt('zhejiang_mask.txt')
+
