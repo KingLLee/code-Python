@@ -1,5 +1,11 @@
 #! /bin/bash
 
+# Create dir
+mkdir -p ERA5
+mkdir -p down_py
+mkdir -p log
+
+# Set the time period
 year_begin=2022
 year_end=2022
 
@@ -31,10 +37,5 @@ do
 done
 
 	
-
-
-
-
-
 echo "Work has been done!!!"
 
