@@ -8,7 +8,7 @@ echo "Begin to download：$1 - $2 ERA5 data"
 for var in `cat pres_var`
 do
 
-	mkdir -p  /mnt/group10109share/data/ERA5_for_vic/${var}
+	mkdir -p  ./ERA5/${var}
 
 
 	for year in `seq ${year_begin} ${year_end}`
@@ -67,7 +67,7 @@ c.retrieve(
             '21:00', '22:00', '23:00',
         ],
     },
-    '/mnt/group10109share/data/ERA5_for_vic/${var}/${filename}.nc')
+    './ERA5/${var}/${filename}.nc')
 
 EOF
 
