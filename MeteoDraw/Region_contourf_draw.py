@@ -5,7 +5,8 @@ Drawing series: Regional contourf draw
 
     A series of drawing methods to present specific data in a picture as quick as you can.
 
-    This is for regional contourf picture.
+    This is for regional contourf picture. You can use it cooperating with the Methods: Shape_Mask, so that
+    the pic would just present the region you prefer.
 '''
 
 
