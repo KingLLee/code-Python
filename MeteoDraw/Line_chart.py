@@ -16,7 +16,7 @@ def Line_chart(x, y, fig_axe):
     '''
     :param x:   Abscissa, 1-D array
     :param y:   Ordinate, 1-D array
-    :param axe: Artificially set the canvas by matplotlib
+    :param fig_axe: Artificially set the canvas by matplotlib
                 Example, 
                         fig = plt.figure(figsize=(16, 10), dpi=100)
                         fig_axe = fig.add_axes([0.1, 0.1, 0.8, 0.8])
