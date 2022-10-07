@@ -86,7 +86,7 @@ for ilon in np.arange(36):  # 36 or 18 belongs to how many tiles along the lon a
         array = bnu_read_Binary(filename[i])
 
         
-        # 将数据转换为以（lon, lat）为维度
+        # convert the data's dimension to (lon, lat)
         read_data[lonsta:lonend+1, latsta:latend+1] = np.rot90(array, -1)
 
 
