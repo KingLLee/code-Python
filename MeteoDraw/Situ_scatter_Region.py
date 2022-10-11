@@ -16,7 +16,7 @@ import cmaps
 import cartopy.io.shapereader as shpreader
 import cartopy.feature as cfeature
 
-def region_Situ_draw(lon, lat, z, shape_file, img_extent, fig_axe):
+def region_situ_draw(lon, lat, z, shape_file, img_extent, fig_axe):
     '''
         :param lon: longitude vector
         :param lat: latitude vector

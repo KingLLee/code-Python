@@ -5,14 +5,14 @@ import cartopy.crs as ccrs
 from matplotlib.ticker import MultipleLocator, FormatStrFormatter, AutoMinorLocator
 
 
-def Global_contourf_draw(lon, lat, z, fig_axe):
+def global_situ_draw(lon, lat, z, fig_axe):
     '''
         :param lon: longitude vector
         :param lat: latitude vector
         :param   z: 1D-varible vector
         :fig_axe: Artificially set the canvas by matplotlib.
     '''
-    
+
 
     fig_axe.set_global()
     # fig_axe.add_feature(cfeature.LAND.with_scale('110m'), edgecolor = 'black', linewidth = 2)
