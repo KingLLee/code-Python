@@ -67,7 +67,7 @@ def region_situ_draw(lon, lat, z, shape_file, img_extent, fig_axe):
     
     fig_axe.add_feature(cfeature.COASTLINE)
     fig_axe.add_feature(cfeature.OCEAN)
-    # fig_axe.add_geometries(cfeature.OCEAN, proj, facecolor = 'none', edgecolor = 'k', linewidth = 2, zorder = 999)
+    # fig_axe.add_geometries(shpreader.Reader(region_shp).geometries(), proj, facecolor = 'none', edgecolor = 'k', linewidth = 2, zorder = 999)
     
     # Draw the point with value. If you just need to draw the situ specific position, pls change "c=z" to "c='specific color'"
     S = 10

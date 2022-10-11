@@ -16,6 +16,7 @@ import cartopy.crs as ccrs
 from matplotlib.ticker import MultipleLocator
 import cmaps
 import cartopy.io.shapereader as shpreader
+import cartopy.feature as cfeature
 
 
 def region_contourf_draw(lon, lat, z, levels, shape_file, img_extent, fig_axe):
@@ -70,6 +71,8 @@ def region_contourf_draw(lon, lat, z, levels, shape_file, img_extent, fig_axe):
     [x.set_linewidth(1.5) for x in fig_axe.spines.values()]
     [x.set_color("black") for x in fig_axe.spines.values()]
 
+    fig_axe.add_feature(cfeature.COASTLINE)
+    fig_axe.add_feature(cfeature.OCEAN)
     fig_axe.add_geometries(shpreader.Reader(region_shp).geometries(), proj, facecolor = 'none', edgecolor = 'k', linewidth = 2, zorder = 999)
 
 
