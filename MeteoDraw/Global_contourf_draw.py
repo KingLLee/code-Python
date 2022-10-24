@@ -39,7 +39,7 @@ def Global_contourf_draw(lon, lat, z, central_degree, levels, unit, title):
 
     ax1.set_global()
     # ax1.add_feature(cfeature.LAND.with_scale('110m'), edgecolor = 'black', linewidth = 2)
-    ax1.add_feature(cfeature.COASTLINE.with_scale('110'), edgecolor = 'black', linewidth = 2) 
+    ax1.add_feature(cfeature.COASTLINE.with_scale('110m'), edgecolor = 'black', linewidth = 2) 
 
     ax1.set_xticks(np.linspace(-180, 180, 7, endpoint=True))
     ax1.set_yticks(np.linspace(-90, 90, 7, endpoint=True))
